@@ -1,5 +1,6 @@
 class GamesController < ApplicationController
   def display
+    @start_time = Time.now
     @grid_generated = generate_grid(20)
     @grid = @grid_generated.join(" ")
   end

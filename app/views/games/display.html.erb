@@ -1,8 +1,25 @@
-<%= @grid %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+  <%= @grid %>
 <form action="/compute">
   <label for="try">write your longest word!</label>
   <input type="hidden" name="grid" value="<%= @grid %>">
+  <input type="hidden" name="start_time" value="<%= @start_time %>">
   <input type="text" id="question" name="try" placeholder="write it here!">
   <input type="submit" value="Go on!">
+  </div>
 </form>
+
+
+
+</body>
+</html>
+
 

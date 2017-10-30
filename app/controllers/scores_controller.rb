@@ -3,10 +3,10 @@ require 'open-uri'
 
 class ScoresController < ApplicationController
   def compute
-    @start_time = Time.now
+
     @attempt = params[:try]
     @end_time = Time.now
-    @result = run_game(@attempt, params[:grid], @start_time, @end_time)
+    @result = run_game(@attempt, params[:grid], params[:start_time].to_time, @end_time)
   end
 
   def compute_score(attempt, time_taken)
